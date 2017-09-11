@@ -1,6 +1,6 @@
 //Patricia Figueroa
 
-var numItems = prompt("Please enter the number of grades you want to enter: ");
+var numItems = prompt("How many names would you like to enter? ");
 var numItems = parseInt(numItems);
 for (i = 0; i < numItems; i++)
 {
