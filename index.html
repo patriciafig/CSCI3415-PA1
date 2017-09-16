@@ -1,0 +1,134 @@
+<!--
+Patricia Figueroa
+CSCI 3415 Principles of Programming Languages
+Programming Assignment #1 - JavaScript
+
+The goal of this assignment was to implement a program which inputs a
+sequence of names and grades, computes the average of the grades and
+displays the names, grades and average in an html page, in JavaScript.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Grading Form</title>
+    <style type="text/css">
+        html, #page { padding:0; margin:0;}
+        body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;}
+        h1, h2, h3, h4, h5, h6 {color:darkred;}
+        #page { background:#fff;}
+        #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+
+        /* Header */
+        #logo { padding:0; width:auto; float:left;}
+        #logo h1 a, h1 a:hover { color:darkred; text-decoration:none;}
+        #logo h1 span { color:#f8dbdb;}
+
+        #header { background:#fff; }
+        #header-inner { margin:0 auto; padding:0; width:970px;}
+
+        /* Body */
+        .feature { background:red;padding:18px;}
+        .feature-inner { margin:auto;width:970px; }
+        .feature-inner h1 {color:#f8dbdb;font-size:32px;}
+
+        /* Menu */
+        #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+        #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+        #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+        #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:red; text-decoration:none;}
+        #top-nav ul li.active a, #top-nav ul li a:hover { color:#f8dbdb;}
+
+        /* Content */
+        #content-inner { margin:0 auto; padding:10px 0; width:970px;background:#fff;}
+        #content #contentbar { margin:0; padding:0; float:right; width:760px;}
+        #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+        #content #sidebar { padding:0; float:left; width:200px;}
+        #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+        #content #sidebar .widget h3 a { text-decoration:none;}
+        #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+        #content #sidebar .widget ul li { margin:0;}
+        #content #sidebar .widget ul li { padding:4px 0; width:185px;}
+        #content #sidebar .widget ul li a { color:red; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+        #content #sidebar .widget ul li a:hover { color:#f8dbdb; font-weight:bold; text-decoration:none;}
+
+        /* Footerblurb */
+        #footerblurb { background:#f8dbdb;color:red;}
+        #footerblurb-inner { margin:0 auto; width:922px; padding:24px;}
+        #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+
+        /* Footer */
+        #footer { background:#fff;}
+        #footer-inner { margin:auto; text-align:center; padding:12px; width:922px;}
+        #footer a {color:red;text-decoration:none;}
+
+
+        /* Clear both sides to assist with div alignment  */
+        .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+    </style>
+</head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+<body>
+<div id="page">
+    <header id="header">
+        <div id="header-inner">
+            <div id="logo">
+                <h1><a href="#">CSCI<span>3415</span></a></h1>
+            </div>
+            <div id="top-nav">
+
+            </div>
+            <div class="clr"></div>
+        </div>
+    </header>
+    <div class="feature">
+        <div class="feature-inner">
+            <h1>Programming Assignment 1 - JavaScript</h1>
+        </div>
+    </div>
+
+
+    <div id="footerblurb">
+        <div id="footerblurb-inner">
+
+
+
+            <div class="clr"></div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="footer-inner">
+            <div class="clr"></div>
+        </div>
+    </footer>
+</div>
+
+<center><div id="dataIn">
+    <br />
+</div>
+    Do you want to add more entries?
+    <button type="button" id="add" onclick="add()">Yes</button>
+    <button type="button" onclick="process()">No</button>
+</center>
+
+</body>
+<center>
+    <div id="showResult"></div></center>
+
+<script type="text/javascript" src="grades.js"></script>
+</html>
