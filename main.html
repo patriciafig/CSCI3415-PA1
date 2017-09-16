@@ -1,58 +1,62 @@
-<!-- Patricia Figueroa
+<!--
+Patricia Figueroa
 CSCI 3415 Principles of Programming Languages
-Programming Assignment 1
-Implement a program which inputs a sequence of names and grades, computes the average of the grades,
-and displays the names, grades, and average in an HTML page, in Javascript.
+Programming Assignment #1 - JavaScript
+
+The goal of this assignment was to implement a program which inputs a
+sequence of names and grades, computes the average of the grades and
+displays the names, grades and average in an html page, in JavaScript.
+
 -->
 
-
+<!DOCTYPE html>
 <html>
-<body>
-<title>Grading form</title>
 
-<!-- Names: <textarea id="names"></textarea><br />
-Grades: <textarea id="grades"></textarea><br /><br /> -->
-<div id="dataIn">
-    <!--  Name: <input type="text" name="name" style="width:200px">
-      Grade: <input type="text" name="grade" style="width:200px">-->
+<body>
+<title>Grading Form</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+  .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+  .fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+<header style="padding:128px 16px; font-weight:bold;">
+  <center><h1>Programming Assignment #1</h1></center>
+  <center><p>Grading Form</p></center>
+</header>
+
+
+<center><div id="dataIn">
       <br />
   </div>
   <br />
   Do you want to add more entries?
   <button type="button" id="add" onclick="add()">Yes</button>
-  <button type="button" onclick="process()">No</button>
-  <!--
-  <br />
-  <br />
-  Grading Statistics:
-  <table border="2">
-      <tr>
-          <td>A</td>
-          <td id="a">NA</td>
-      </tr>
-      <tr>
-          <td>B</td>
-          <td id="b">NA</td>
-      </tr>
-      <tr>
-          <td>C</td>
-          <td id="c">NA</td>
-      </tr>
-      <tr>
-          <td>D</td>
-          <td id="d">NA</td>
-      </tr>
-      <tr>
-          <td>E</td>
-          <td id="e">NA</td>
-      </tr>
-      <tr>
-          <td>F</td>
-          <td id="f">NA</td>
-      </tr>
-  </table>
-  -->
+  <button type="button" onclick="process()">No</button></center>
+
+
+<div>
+  <div class="content">
+    <div class="twothird">
+
+      <p></p>
+    </div>
+
+    <div>
+    </div>
+  </div>
+</div>
+
+<div>
+</div>
 
 </body>
 <script type="text/javascript" src="grades.js"></script>
 </html>
+

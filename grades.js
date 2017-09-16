@@ -42,14 +42,14 @@ var process = function()
     }
 
     for (j = 0; j < names.length; ++j) {
-        document.write(names[j] + " got a " + grades[j] + "!<br>");
+        document.write(names[j] + " got a " + grades[j] + "<br>");
     }
     average = total / j;
     average = average.toFixed(1);
     document.write("<p>The class average was " + average);
 
     // loop to make the table
-    document.write('<table border="1">');
+    document.write('<table border="3">');
     grade_letter = ['A', 'B', 'C', 'D', 'F'];
     for (i = 0; i < 5; i++)
     {
@@ -98,3 +98,4 @@ function add() {
 
     foo.appendChild(br);
 }
+
