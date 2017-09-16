@@ -1,5 +1,6 @@
 //Patricia Figueroa
 
+
 var numItems = prompt("How many names would you like to enter? ");
 var numItems = parseInt(numItems);
 for (i = 0; i < numItems; i++)
@@ -55,7 +56,7 @@ var process = function()
     }
     average = total / j;
     average = average.toFixed(1);
-    document.getElementById("showResult").innerHTML += "<p>The class average was " + average + "</p>";
+    document.getElementById("showResult").innerHTML += "<h1>The class average was " + average + "</h1>";
     //document.write("<p>The class average was " + average);
 
     // loop to make the table
