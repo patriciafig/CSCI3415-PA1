@@ -9,6 +9,8 @@ for (i = 0; i < numItems; i++)
 
 var process = function()
 {
+    var storeValue = new Array();
+    var table = [];
     var dom_names = document.getElementsByName('name');
     var dom_grades = document.getElementsByName('grade');
 
@@ -18,7 +20,14 @@ var process = function()
     {
         grades.push(dom_grades[i].value);
         names.push(dom_names[i].value);
+        storeValue[dom_names[i].value] = dom_grades[i].value;
     }
+
+    for(list in storeValue) {
+        document.getElementById("showResult").innerHTML += list + " got a " + storeValue[list] + "<br>";
+    }
+    //document.getElementById("showResult").innerHTML = storeValue.join(" ");
+    console.log(storeValue);
 
     grade_count = {A:0, B:0, C:0, D:0, F:0};
     total = 0;
@@ -42,20 +51,25 @@ var process = function()
     }
 
     for (j = 0; j < names.length; ++j) {
-        document.write(names[j] + " got a " + grades[j] + "<br>");
+        // document.write(names[j] + " got a " + grades[j] + "<br>");
     }
     average = total / j;
     average = average.toFixed(1);
-    document.write("<p>The class average was " + average);
+    document.getElementById("showResult").innerHTML += "<p>The class average was " + average + "</p>";
+    //document.write("<p>The class average was " + average);
 
     // loop to make the table
-    document.write('<table border="3">');
+    //document.write('<table border="3">');
     grade_letter = ['A', 'B', 'C', 'D', 'F'];
     for (i = 0; i < 5; i++)
     {
-        document.write('<tr><td>' + grade_letter[i] + '</td><td>' + grade_count[grade_letter[i]] + '</td></tr>');
+        //document.write('<tr><td>' + grade_letter[i] + '</td><td>' + grade_count[grade_letter[i]] + '</td></tr>');
+        table.push("<tr><td>" + grade_letter[i] + "</td><td>" + grade_count[grade_letter[i]] + "</td></tr>");
     }
-    document.write('</table');
+    var html = "<table border='3'> " + table.join("") + "</table>";
+    document.getElementById("showResult").innerHTML += "<div> " + html + "</div>";
+    //var convert = String(html);
+    // document.getElementById("showResult").innerHTML += convert;
 }
 
 function add() {
@@ -98,4 +112,3 @@ function add() {
 
     foo.appendChild(br);
 }
-
