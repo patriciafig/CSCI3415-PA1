@@ -24,9 +24,13 @@ var process = function()
         storeValue[dom_names[i].value] = dom_grades[i].value;
     }
 
+    var firstTag = "<center><table><thead><tr><th>Name</th><th>Score</th></tr></thead> <tbody></center>";
+    var lastTag = "<center></tbody></table></center>";
+    var tableBody = [];
     for(list in storeValue) {
-        document.getElementById("showResult").innerHTML += list + " got a " + storeValue[list] + "<br>";
+        tableBody.push("<center><tr><td>" + list + "</td><td>" + storeValue[list] + "</td></tr></center>");
     }
+    document.getElementById("showOutput").innerHTML += firstTag + tableBody + lastTag;
     //document.getElementById("showResult").innerHTML = storeValue.join(" ");
     console.log(storeValue);
 
@@ -67,10 +71,8 @@ var process = function()
         //document.write('<tr><td>' + grade_letter[i] + '</td><td>' + grade_count[grade_letter[i]] + '</td></tr>');
         table.push("<tr><td>" + grade_letter[i] + "</td><td>" + grade_count[grade_letter[i]] + "</td></tr>");
     }
-    var html = "<table border='3'> " + table.join("") + "</table>";
-    document.getElementById("showResult").innerHTML += "<div> " + html + "</div>";
-    //var convert = String(html);
-    // document.getElementById("showResult").innerHTML += convert;
+    var html = "<center><table border='3'> " + table.join("") + "</table></center>";
+    document.getElementById("showResult").innerHTML += html;
 }
 
 function add() {

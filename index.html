@@ -76,9 +76,18 @@ displays the names, grades and average in an html page, in JavaScript.
             background-color: #e4e4e4;
         }
 
-    </style>
-</head>
+        #showResult, #showOutput{
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+        }
 
+
+    </style>
+    <br>
+
+
+</head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,30 +129,29 @@ displays the names, grades and average in an html page, in JavaScript.
                sequence of names and grades, computes the average of the grades and
                displays the names, grades and average in an html page, in JavaScript.</p>
 
-            <center><div id="dataIn">
-                <br />
-            </div>
-                <b>Do you want to add more entries?</b>
+
+        <center>
+                <div id="dataIn">
+                    <br>
+                </div>
+                <br>
+                Do you want to add more entries?
                 <button type="button" id="add" onclick="add()">Yes</button>
                 <button type="button" onclick="process()">No</button>
-            </center>
+        </center>
 
+            <div id="showOutput">
+            </div>
 
-            <div class="clr"></div>
+            <div id="showResult">
+            </div>
+
         </div>
     </div>
-
-    <footer id="footer">
-        <div id="footer-inner">
-            <div class="clr"></div>
-        </div>
-    </footer>
 </div>
 
 
-</body>
-<center>
-    <div id="showResult"></div></center>
 
+</body>
 <script type="text/javascript" src="grades.js"></script>
 </html>
